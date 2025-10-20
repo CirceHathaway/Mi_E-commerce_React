@@ -1,0 +1,88 @@
+/* ======== NAV PRINCIPAL ======== */
+nav {
+  width: 100vw; /* Ocupa todo el ancho de la ventana */
+  margin-left: calc(50% - 50vw); /* Rompe el centrado del #root */
+  background-color: #1a1a1a;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Lista de enlaces */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos base para enlaces */
+nav a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Subrayado animado en hover */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffcc66;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcc66;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Contador del carrito */
+.in-cart {
+  background-color: #ff5252;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 6px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 20px;
+  min-height: 20px;
+  vertical-align: middle;
+  box-shadow: 0 0 6px rgba(255, 82, 82, 0.6);
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}

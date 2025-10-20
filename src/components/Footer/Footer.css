@@ -1,0 +1,22 @@
+footer {
+  width: 100vw; /* Ocupa todo el ancho de la ventana */
+  margin-left: calc(50% - 50vw); /* Rompe el centrado del #root */
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.4);
+}
+
+footer p {
+  margin: 0;
+  letter-spacing: 0.5px;
+  color: #aaa;
+}
+
+footer p:hover {
+  color: #ffcc66;
+  transition: color 0.3s ease;
+}
