@@ -1,0 +1,20 @@
+header {
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-link h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.logo-link:hover h2 {
+  color: #ffcc66; /* cambia de color al pasar el mouse */
+}

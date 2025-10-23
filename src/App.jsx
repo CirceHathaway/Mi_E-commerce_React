@@ -20,6 +20,7 @@ function App() {
                 element={<ItemListContainer titulo={"Bienvenidos"} />}
               />
               <Route path="/detail/:id" element={<ItemDetailContainer />} />
+              <Route path="/carrito" element={<h1>Carrito</h1>}/>
             </Routes>
             {/* Dejamos fuera del Routes lo que queremos que no se vuelva a renderizar al navegar */}
             <Footer />
