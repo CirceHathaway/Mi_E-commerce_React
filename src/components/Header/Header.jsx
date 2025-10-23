@@ -6,7 +6,11 @@ export const Header = () => {
   return (
     <header>
       <Link to="/" className="logo-link">
-        <h2>Logo</h2>
+        <img
+          src="/images/logo.png"
+          alt="Logo del sitio"
+          className="logo-img"
+        />
       </Link>
       <Nav />
     </header>
