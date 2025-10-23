@@ -22,5 +22,141 @@
     "price": 1200,
     "description": "Hojaldre 100% manteca, crujiente por fuera y tierno por dentro.",
     "imageUrl": "/images/croissant.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Alfajor de maicena",
+    "price": 900,
+    "category": "dulce",
+    "description": "Clásico relleno con dulce de leche y coco rallado.",
+    "imageUrl": "/images/alfajor-maicena.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Brownie de chocolate",
+    "price": 1800,
+    "category": "dulce",
+    "description": "Extra húmedo, con nueces tostadas.",
+    "imageUrl": "/images/brownie.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Tarta de frutillas",
+    "price": 5200,
+    "category": "dulce",
+    "description": "Base crocante, crema pastelera y frutillas frescas.",
+    "imageUrl": "/images/tarta-frutillas.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Cheesecake de maracuyá",
+    "price": 6400,
+    "category": "dulce",
+    "description": "Suave, con coulis de maracuyá casero.",
+    "imageUrl": "/images/cheesecake-maracuya.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Cookies con chips",
+    "price": 1300,
+    "category": "dulce",
+    "description": "Galletas grandes con chips de chocolate.",
+    "imageUrl": "/images/cookies-chips.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Medialunas de manteca",
+    "price": 1400,
+    "category": "dulce",
+    "description": "Glaseadas, tiernas y aromáticas.",
+    "imageUrl": "/images/medialunas.jpg"
+  },
+  {
+    "id": "10",
+    "name": "Budín de vainilla y chips",
+    "price": 4200,
+    "category": "dulce",
+    "description": "Budín esponjoso con chips de chocolate.",
+    "imageUrl": "/images/budin-vainilla-chips.jpg"
+  },
+  {
+    "id": "11",
+    "name": "Pan de campo",
+    "price": 2900,
+    "category": "salado",
+    "description": "Miga aireada y corteza crocante.",
+    "imageUrl": "/images/pan-campo.jpg"
+  },
+  {
+    "id": "12",
+    "name": "Focaccia de romero",
+    "price": 3600,
+    "category": "salado",
+    "description": "Aceite de oliva, romero fresco y sal marina.",
+    "imageUrl": "/images/focaccia-romero.jpg"
+  },
+  {
+    "id": "13",
+    "name": "Baguette francesa",
+    "price": 2100,
+    "category": "salado",
+    "description": "Larga fermentación y corteza fina.",
+    "imageUrl": "/images/baguette.jpg"
+  },
+  {
+    "id": "14",
+    "name": "Empanadas de carne",
+    "price": 950,
+    "category": "salado",
+    "description": "Carne cortada a cuchillo, aceitunas y especias.",
+    "imageUrl": "/images/empanada-carne.jpg"
+  },
+  {
+    "id": "15",
+    "name": "Sandwich de jamón y queso",
+    "price": 2500,
+    "category": "salado",
+    "description": "Pan de miga artesanal, jamón natural y queso.",
+    "imageUrl": "/images/sandwich-jyq.jpg"
+  },
+  {
+    "id": "16",
+    "name": "Tarta de jamón y queso",
+    "price": 4300,
+    "category": "salado",
+    "description": "Masa casera y relleno cremoso.",
+    "imageUrl": "/images/tarta-jamon-queso.jpg"
+  },
+  {
+    "id": "17",
+    "name": "Chipa",
+    "price": 1200,
+    "category": "salado",
+    "description": "Panecillos de almidón de mandioca y queso.",
+    "imageUrl": "/images/chipa.jpg"
+  },
+  {
+    "id": "18",
+    "name": "Scones de queso",
+    "price": 1600,
+    "category": "salado",
+    "description": "Tiernos por dentro, dorados por fuera.",
+    "imageUrl": "/images/scones-queso.jpg"
+  },
+  {
+    "id": "19",
+    "name": "Quiche de espinaca",
+    "price": 5200,
+    "category": "salado",
+    "description": "Base brisée con espinaca y queso.",
+    "imageUrl": "/images/quiche-espinaca.jpg"
+  },
+  {
+    "id": "20",
+    "name": "Roll de canela",
+    "price": 1700,
+    "category": "dulce",
+    "description": "Espiral suave con glaseado de vainilla.",
+    "imageUrl": "/images/roll-canela.jpg"
   }
 ]

@@ -1,0 +1,35 @@
+/* Contenedor de productos: 3 por fila en escritorio */
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columnas */
+  gap: 2rem;                  /* espacio entre tarjetas */
+  align-items: start;         /* alinear arriba cada card */
+  justify-items: center;      /* centrar cada celda */
+  padding: 1rem 0 1.5rem;            /* separación con header/footer */
+}
+
+/* El Link que envuelve cada Item no debe colapsar */
+.item-link {
+  display: block;
+  width: 100%;
+  max-width: 260px;           /* limita el ancho visual de la card */
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ajuste opcional de la card para que se adapte al grid */
+.product-item {
+  width: 100%;                /* ocupa el ancho del .item-link */
+}
+
+@media (max-width: 1024px) {
+  .item-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .item-list {
+    grid-template-columns: 1fr;
+  }
+}
