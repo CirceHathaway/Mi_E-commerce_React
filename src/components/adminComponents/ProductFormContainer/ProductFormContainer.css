@@ -1,0 +1,209 @@
+/* ======= WRAPPER ======= */
+section {
+  /* no forzamos full-bleed; se alinea con el resto del contenido */
+}
+
+/* ======= FORM ======= */
+.product-form {
+  max-width: 760px;
+  margin: 1rem auto 2rem;
+  padding: 1rem 1.25rem 1.5rem;
+  background: #1b1b1b;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  color: #e9e9e9;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dos columnas en desktop */
+  gap: 14px 18px;
+}
+
+/* Título */
+.product-form > h2 {
+  grid-column: 1 / -1;
+  margin: 0 0 0.5rem;
+  text-align: center;
+  color: #ffcc66;
+  font-size: 1.6rem;
+  letter-spacing: 0.3px;
+}
+
+/* Cada fila de campo (label + input/textarea) */
+.product-form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Hacemos descripción e imagen a todo el ancho si querés ese layout */
+.product-form > div:nth-of-type(4),
+.product-form > div:nth-of-type(5) {
+  grid-column: 1 / -1;
+}
+
+/* Labels */
+.product-form label {
+  font-size: 0.95rem;
+  color: #cfcfcf;
+}
+
+/* Inputs, selects y textarea */
+.product-form input[type="text"],
+.product-form input[type="number"],
+.product-form input[type="file"],
+.product-form select,
+.product-form textarea {
+  background: #111;
+  color: #f5f5f5;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.product-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.product-form input::placeholder,
+.product-form textarea::placeholder {
+  color: #9a9a9a;
+}
+
+/* Focus ring consistente con tu acento */
+.product-form input:focus,
+.product-form select:focus,
+.product-form textarea:focus {
+  border-color: #646cff;
+  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.2);
+}
+
+/* Errores de validación */
+.product-form .error {
+  margin: 2px 0 0;
+  color: #ff6b6b;
+  font-size: 0.85rem;
+}
+
+/* Botón Guardar */
+.product-form > .btn,
+.product-form button.btn {
+  grid-column: 1 / -1;
+  justify-self: center;
+  min-width: 200px;
+  padding: 0.75rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.product-form > .btn:hover,
+.product-form button.btn:hover {
+  border-color: #646cff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  transform: translateY(-1px);
+}
+
+.product-form > .btn:disabled,
+.product-form button.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ===== Mejoras de contraste para input file ===== */
+.product-form input[type="file"] {
+  background: #111;          /* fondo oscuro */
+  color: #e6e6e6;            /* texto claro */
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+}
+
+/* Botón nativo (Chrome/Edge/Firefox modernos) */
+.product-form input[type="file"]::file-selector-button {
+  background: #2a2a2a;       /* botón oscuro */
+  color: #f5f5f5;            /* texto legible */
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  margin-right: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.1s ease;
+}
+
+.product-form input[type="file"]::file-selector-button:hover {
+  background: #333;
+  border-color: #646cff;     /* acento del sitio */
+}
+
+.product-form input[type="file"]::file-selector-button:active {
+  transform: translateY(1px);
+}
+
+/* Safari/legacy WebKit */
+.product-form input[type="file"]::-webkit-file-upload-button {
+  background: #2a2a2a;
+  color: #f5f5f5;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  margin-right: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.1s ease;
+}
+.product-form input[type="file"]::-webkit-file-upload-button:hover {
+  background: #333;
+  border-color: #646cff;
+}
+.product-form input[type="file"]::-webkit-file-upload-button:active {
+  transform: translateY(1px);
+}
+
+/* Enfoque accesible */
+.product-form input[type="file"]:focus {
+  border-color: #646cff;
+  box-shadow: 0 0 0 3px rgba(100,108,255,0.2);
+  outline: none;
+}
+
+/* Estado deshabilitado coherente */
+.product-form input[type="file"]:disabled,
+.product-form input[type="file"]::file-selector-button:disabled,
+.product-form input[type="file"]::-webkit-file-upload-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 720px) {
+  .product-form {
+    grid-template-columns: 1fr; /* una columna en mobile */
+    gap: 12px;
+    padding: 0.9rem 1rem 1.25rem;
+  }
+
+  /* Todos los campos a ancho completo ya en mobile */
+  .product-form > div:nth-of-type(4),
+  .product-form > div:nth-of-type(5) {
+    grid-column: auto;
+  }
+
+  .product-form > .btn,
+  .product-form button.btn {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* Pequeño ajuste para file input en algunos navegadores */
+.product-form input[type="file"] {
+  padding: 0.5rem;
+}
