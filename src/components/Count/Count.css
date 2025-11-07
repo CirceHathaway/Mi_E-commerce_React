@@ -1,12 +1,55 @@
 .count-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;        /* un poco más de aire */
+  width: 100%;
 }
 
 .count-buttons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;         /* espacio entre - [n] + */
+  width: 100%;
+}
+
+/* Botones - y + compactos, no rompen la card */
+.count-buttons .btn {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0;
+  border-radius: 8px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* El número al medio, con fondo y borde para estabilidad de ancho */
+.count-buttons span {
+  display: inline-block;
+  width: 56px;
+  min-width: 56px;
+  text-align: center;
+  background: #111;
+  color: #f5f5f5;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.4rem 0.25rem;
+}
+
+/* Botón de confirmar ocupa el ancho disponible de la card */
+.btn.btn-add {
+  width: 100%;
+}
+
+/* Estado deshabilitado consistente */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
