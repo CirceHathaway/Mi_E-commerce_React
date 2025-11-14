@@ -3,39 +3,44 @@ import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
 export const ItemDetailContainer = () => {
-    const [detail, setDetail] = useState({});
+  const [detail, setDetail] = useState(null);
+  const [error, setError] = useState("");
+  const { id } = useParams();
 
-    //Desestructuramos el objeto del useParams
-    //la clave coincide con el nombre que definimos en Route-> :id
-    const {id} = useParams();
+  useEffect(() => {
+    const controller = new AbortController();
+    setDetail(null);
+    setError("");
 
-    useEffect (() => {
-        fetch("https://690d5f15a6d92d83e851412f.mockapi.io/products")
-            .then(
-            (res) => {
-                if(!res.ok) {
-                    throw new Error("No se encontró el producto");
-                }
-                return res.json();
-            })
-            .then((data) => {
-                const found = data.find((p) => p.id === id);
-                if(found) {
-                    setDetail(found); 
-                } else {
-                    throw new Error("No se encontró el producto");
-                }
-            })
-            .catch((err) => {
-                console.log(err); 
-            });
-    }, [id]);
+    (async () => {
+      try {
+        const res = await fetch(
+          `https://690d5f15a6d92d83e851412f.mockapi.io/products/${id}`,
+          { signal: controller.signal }
+        );
+        if (!res.ok) throw new Error("No se encontró el producto");
+        const data = await res.json();
+        setDetail(data);
+      } catch (err) {
+        if (err.name !== "AbortError") {
+          console.error(err);
+          setError(err.message || "Error al cargar el producto");
+        }
+      }
+    })();
 
-    return <main>
-        {Object.keys(detail).length ? (
-            <ItemDetail detail={detail} />
-        ) : (
-            <p>Cargando...</p>
-        )}
-    </main>;
+    return () => controller.abort();
+  }, [id]);
+
+  return (
+    <main>
+      {error ? (
+        <p>{error}</p>
+      ) : detail ? (
+        <ItemDetail detail={detail} />
+      ) : (
+        <p>Cargando...</p>
+      )}
+    </main>
+  );
 };
