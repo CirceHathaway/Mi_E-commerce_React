@@ -10,7 +10,7 @@ export const ItemDetailContainer = () => {
     const {id} = useParams();
 
     useEffect (() => {
-        fetch("/data/products.json")
+        fetch("https://690d5f15a6d92d83e851412f.mockapi.io/products")
             .then(
             (res) => {
                 if(!res.ok) {
