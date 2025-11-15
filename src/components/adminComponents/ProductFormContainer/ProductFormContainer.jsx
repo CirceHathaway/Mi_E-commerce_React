@@ -3,12 +3,11 @@ import { ProductFormUI } from "../ProductFormUI/ProductFormUI";
 import { validateProduct } from "../../../utils/validateProducts";
 import { uploadToImgbb } from "../../../services/uploadImage";
 import { createProduct } from "../../../services/products";
-
 import "../ProductFormContainer/ProductFormContainer.css";
 
 export const ProductFormContainer = () => {
-  const [loading, setLoading] = useState();
-  const [errors, setErrors] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
   const [file, setFile] = useState(null);
   const [product, setProduct] = useState({
     name: "",

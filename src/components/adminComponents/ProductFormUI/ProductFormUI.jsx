@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const ProductFormUI = ({
   product,
   errors,
@@ -9,7 +11,9 @@ export const ProductFormUI = ({
   return (
     <section>
       <form className="product-form" onSubmit={onSubmit}>
+
         <h2>Agregar producto</h2>
+
         <div>
           <label>Nombre:</label>
           <input
@@ -21,6 +25,7 @@ export const ProductFormUI = ({
           />
           {errors.name && <p className="error">{errors.name}</p>}
         </div>
+
         <div>
           <label>Precio:</label>
           <input
@@ -32,6 +37,7 @@ export const ProductFormUI = ({
           />
           {errors.price && <p className="error">{errors.price}</p>}
         </div>
+
         <div>
           <label>Categoria</label>
           <input
@@ -43,6 +49,7 @@ export const ProductFormUI = ({
           />
           {errors.category && <p className="error">{errors.category}</p>}
         </div>
+
         <div>
           <label>Descripcion:</label>
           <textarea
@@ -53,6 +60,7 @@ export const ProductFormUI = ({
           ></textarea>
           {errors.description && <p className="error">{errors.description}</p>}
         </div>
+
         <div>
           <label>Imagen:</label>
           <input
@@ -62,9 +70,16 @@ export const ProductFormUI = ({
           />
           {errors.file && <p className="error">{errors.file}</p>}
         </div>
+
         <button className="btn" type="submit" disabled={loading}>
           {loading ? "Guardando..." : "Guardar"}
         </button>
+
+        {/* TOPBAR: botón para ir al listado */}
+        <div className="form-topbar">
+          <Link to="/admin/listado" className="btn btn-link">Ver listado</Link>
+        </div>
+
       </form>
     </section>
   );

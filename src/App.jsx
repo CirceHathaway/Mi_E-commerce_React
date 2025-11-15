@@ -10,6 +10,8 @@ import { MainLayout } from "./layouts/MainLayout";
 import { AdminLayout } from "./layouts/AdminLayout";
 import { RutaProtegida } from "./components/RutaProtegida/RutaProtegida";
 import { Login } from "./components/Login/Login";
+import { EditProductContainer } from "./components/adminComponents/EditProductContainer/EditProductContainer";
+import { AdminProductsList } from "./components/adminComponents/AdminProductsList/AdminProductsList";
 
 function App() {
   return (
@@ -42,6 +44,24 @@ function App() {
                   element={
                     <RutaProtegida>
                       <ProductFormContainer />
+                    </RutaProtegida>
+                  }
+                />
+
+                <Route
+                  path="listado"
+                  element={
+                    <RutaProtegida>
+                      <AdminProductsList />
+                    </RutaProtegida>
+                  }
+                />
+
+                <Route
+                  path="editar/:id"
+                  element={
+                    <RutaProtegida>
+                      <EditProductContainer />
                     </RutaProtegida>
                   }
                 />
